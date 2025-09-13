@@ -29,7 +29,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="lg:py-4 gap-4 items-center flex flex-col lg:flex-row justify-between w-11/12 mx-auto border-t mt-6 border-slate-200">
-                  <p className="text-sm">Copyright 2025 © agency.ai  -  All Right Reserved.</p>
+                  <p className="text-sm mt-4">Copyright 2025 © agency.ai  -  All Right Reserved.</p>
                   <div className="flex flex-row gap-4 items-center">
                     <img src={assets.facebook_icon} className="w-5" alt="" />
                     <img src={assets.twitter_icon} className="w-5" alt="" />
