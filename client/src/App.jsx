@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import TrustedBy from "./components/TrustedBy";
+import Services from "./components/Services";
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
      <Navbar theme={theme} setTheme={setTheme}/>
      <Hero/>
      <TrustedBy/>
+     <Services/>
      <Footer/>
     </div>
   );

@@ -17,8 +17,8 @@ const Footer = () => {
                             <a className="hover:text-slate-600 transition" href="#">Testimonial</a>
                         </div>
                     </div>
-                    <div>
-                        <h2 className="font-semibold text-gray-800 mb-5">Subscribe to our newsletter</h2>
+                    <div className="max-sm:mt-8">
+                        <h2 className="font-semibold text-gray-800 mb-5 ">Subscribe to our newsletter</h2>
                         <div className="text-sm space-y-6 max-w-sm">
                             <p>The latest news, articles, and resources, sent to your inbox weekly.</p>
                             <div className="flex items-center justify-center gap-2 p-2 rounded-md bg-indigo-50">
