@@ -67,6 +67,7 @@ const ContactUs = () => {
                         Enter your message
                     </label>
                 </div>
+                 <button class="btn-3">Submit</button>
             </form>
         </div>
     );
