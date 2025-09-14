@@ -1,14 +1,14 @@
 import assets from "../assets/assets";
 
 
-const Footer = () => {
+const Footer = ({theme}) => {
     return (
         <>
     
-            <footer className="mt-30 w-full text-sm text-slate-500 bg-[#F9FBFF] pt-10">
+            <footer className="mt-30 w-full text-sm text-slate-500 bg-[#F9FBFF] dark:bg-gray-900 pt-10">
                 <div className=" w-11/12 mx-auto flex justify-between lg:flex-row flex-col">
                     <div className="flex col-span-1 flex-col space-y-4">
-                      <img src={assets.logo} className="w-32" alt="" />
+                      <img src={theme === 'dark' ? assets.logo_dark : assets.logo} className="w-32" alt="" />
                         <p className="text-sm/7 mt-6">From strategy to execution, we craft digital solutions that move your business forward.</p>
                           <div className="flex flex-row text-sm space-x-6 ">
                             <a className="hover:text-slate-600 transition" href="#">Home</a>
@@ -18,7 +18,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="max-sm:mt-8">
-                        <h2 className="font-semibold text-gray-800 mb-5 ">Subscribe to our newsletter</h2>
+                        <h2 className="font-semibold text-gray-800 dark:text-slate-500 mb-5 ">Subscribe to our newsletter</h2>
                         <div className="text-sm space-y-6 max-w-sm">
                             <p>The latest news, articles, and resources, sent to your inbox weekly.</p>
                             <div className="flex items-center justify-center gap-2 p-2 rounded-md bg-indigo-50">
