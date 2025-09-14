@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <>
     
-            <footer className=" w-full text-sm text-slate-500 bg-[#F9FBFF] pt-10">
+            <footer className="mt-30 w-full text-sm text-slate-500 bg-[#F9FBFF] pt-10">
                 <div className=" w-11/12 mx-auto flex justify-between lg:flex-row flex-col">
                     <div className="flex col-span-1 flex-col space-y-4">
                       <img src={assets.logo} className="w-32" alt="" />
