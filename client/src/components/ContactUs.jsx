@@ -1,9 +1,37 @@
+
 import assets from "../assets/assets";
 import Titel from "./Titel";
 import './contact.css';
 import { MdOutlineMessage } from "react-icons/md";
+import toast from "react-hot-toast";
 
 const ContactUs = () => {
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+   // setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "f4354c38-c9ef-47cc-a19e-83009964cbb8");
+
+    try{
+ const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      toast.success("Thank you for your submission");
+      event.target.reset();
+    } else {
+      toast.error(data.message)
+    }
+    } catch(error){
+    toast.error(error.message)
+    }
+   
+  };
     return (
         <div className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-32 text-gray-700 dark:text-white">
             <Titel 
@@ -11,11 +39,12 @@ const ContactUs = () => {
                 desc={'From strategy to execution, we craft digital solutions that move your business forward'}
             />
 
-            <form className="grid grid-cols-1 gap-3 sm:gap-5">
+            <form  onSubmit={onSubmit} className="grid grid-cols-1 gap-3 sm:gap-5">
                 <div className="flex flex-col md:flex-row w-full gap-3 sm:gap-5">
                     {/* Name Input */}
                     <div className="input-field">
                         <input 
+                            name="name"
                             type="text" 
                             id="username"
                             className="border border-gray-300 dark:border-gray-600" 
@@ -34,6 +63,7 @@ const ContactUs = () => {
                     {/* Email Input */}
                     <div className="input-field">
                         <input 
+                            name="email"
                             type="email" 
                             id="useremail"
                             className="border border-gray-300 dark:border-gray-600" 
@@ -52,7 +82,8 @@ const ContactUs = () => {
 
                 {/* Message Textarea */}
                 <div className="input-field">
-                    <textarea  
+                    <textarea 
+                        name="message" 
                         id="usermessage"
                         rows={4} 
                         className="w-full p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600" 
@@ -67,7 +98,7 @@ const ContactUs = () => {
                         Enter your message
                     </label>
                 </div>
-                 <button class="btn-3">Submit</button>
+                 <button type="submit" class="btn-3">Submit</button>
             </form>
         </div>
     );
