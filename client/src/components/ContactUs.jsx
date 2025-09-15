@@ -4,7 +4,8 @@ import Titel from "./Titel";
 import './contact.css';
 import { MdOutlineMessage } from "react-icons/md";
 import toast from "react-hot-toast";
-
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react"
 const ContactUs = () => {
 
   const onSubmit = async (event) => {
@@ -33,13 +34,23 @@ const ContactUs = () => {
    
   };
     return (
-        <div className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-32 text-gray-700 dark:text-white">
+        <motion.div
+        initial='hidden'
+        whileInView={'visible'}
+        viewport={{ once: true}}
+        transition={{ staggerChildren: 0.2}}
+        id="contact-us" className="flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-32 text-gray-700 dark:text-white">
             <Titel 
                 title={'Reach out to us'} 
                 desc={'From strategy to execution, we craft digital solutions that move your business forward'}
             />
 
-            <form  onSubmit={onSubmit} className="grid grid-cols-1 gap-3 sm:gap-5">
+            <motion.form 
+            initial={{ opacity:0, y: 30}}
+            whileInView={{ opacity:1, y:0}}
+            transition={{ duration: 0.5, delay: 0.4}}
+            viewport={{ once: true}}
+            onSubmit={onSubmit} className="grid grid-cols-1 gap-3 sm:gap-5">
                 <div className="flex flex-col md:flex-row w-full gap-3 sm:gap-5">
                     {/* Name Input */}
                     <div className="input-field">
@@ -99,8 +110,8 @@ const ContactUs = () => {
                     </label>
                 </div>
                  <button type="submit" class="btn-3">Submit</button>
-            </form>
-        </div>
+            </motion.form>
+        </motion.div>
     );
 };
 
