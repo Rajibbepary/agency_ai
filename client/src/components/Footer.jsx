@@ -34,7 +34,7 @@ const Footer = ({theme}) => {
                     transition={{duration: 0.5, delay:0.3}}
                     viewport={{once: true}}
                     className="max-sm:mt-8">
-                        <h2 className="font-semibold text-gray-800 dark:text-slate-500 mb-5 ">Subscribe to our newsletter</h2>
+                        <h2 className="font-semibold text-gray-800 dark:text-slate-500 mb-5 text-xl">Subscribe to our newsletter</h2>
                         <div className="text-sm space-y-6 max-w-sm">
                             <p>The latest news, articles, and resources, sent to your inbox weekly.</p>
                             <div className="flex items-center justify-center gap-2 p-2 rounded-md bg-indigo-50">
@@ -49,7 +49,7 @@ const Footer = ({theme}) => {
                     whileInView={{opacity:1,}}
                     transition={{duration: 0.6, delay:0.4}}
                     viewport={{once: true}}className="lg:py-4 gap-4 items-center flex flex-col lg:flex-row justify-between w-11/12 mx-auto border-t mt-6 border-slate-200">
-                  <p className="text-sm mt-4">Copyright 2025 © agency.ai  -  All Right Reserved.</p>
+                  <p className="text-sm mt-4">Copyright 2025 © agency.ai - All Right Reserved.</p>
                   <div className="flex flex-row gap-4 items-center">
                     <img src={assets.facebook_icon} className="w-5" alt="" />
                     <img src={assets.twitter_icon} className="w-5" alt="" />
