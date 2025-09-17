@@ -1,6 +1,7 @@
 import assets from "../assets/assets";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react"
+import './contact.css';
 
 const Footer = ({theme}) => {
     return (
@@ -51,10 +52,18 @@ const Footer = ({theme}) => {
                     viewport={{once: true}}className="lg:py-4 gap-4 items-center flex flex-col lg:flex-row justify-between w-11/12 mx-auto border-t mt-6 border-slate-200">
                   <p className="text-sm mt-4">Copyright 2025 © agency.ai - All Right Reserved.</p>
                   <div className="flex flex-row gap-4 items-center">
-                    <img src={assets.facebook_icon} className="w-5" alt="" />
-                    <img src={assets.twitter_icon} className="w-5" alt="" />
-                    <img src={assets.instagram_icon} className="w-5" alt="" />
-                    <img src={assets.linkedin_icon} className="w-5" alt="" />
+                    <div className=" icon-1 rounded-full p-2  hover:bg-blue-500 transition ease-in ">
+                        <img src={assets.facebook_icon} className="w-5" alt="" />
+                    </div>
+                     <div className="icon-2 rounded-full p-2 hover:bg-black hover:dark:bg-amber-50 transition ease-in ">
+                         <img src={assets.twitter_icon} className="w-5" alt="" />
+                     </div>
+                      <div className="icon-3 rounded-full p-2 hover:bg-red-500 transition ease-in">
+                         <img src={assets.instagram_icon} className="w-5" alt="" />
+                     </div>
+                     <div className=" icon-1 rounded-full p-2 hover:bg-blue-700 transition ease-in ">
+                      <img src={assets.linkedin_icon} className="w-5" alt="" />
+                     </div>
                   </div>
                 </motion.div>
             </motion.footer>

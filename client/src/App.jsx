@@ -15,7 +15,7 @@ const App = () => {
 
   //refs for custom cursor position tracking
   const mouse = useRef({x:0, y:0})
-  const position = useRef({x: 0, y:0})
+  const position = useRef({x:0, y:0})
 
   useEffect(()=>{
     const handleMouseMove = (e)=>{
@@ -34,7 +34,6 @@ const App = () => {
             outlineRef.current.style.transform = 
               `translate3d(${position.current.x - 20}px, ${position.current.y - 20}px, 0)`
           }
-
       requestAnimationFrame(animate)
     }
     animate()
